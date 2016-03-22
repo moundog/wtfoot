@@ -97,14 +97,19 @@ function update () {
     
     if (score >= 100) {
         if (ballImg.x > w / 2 - w / 10 && ballImg.x < w / 2 + w / 18) {
-            document.getElementById("score-contener").innerHTML = "GOAAAAAAAAAAAL";
+            var text = "GOAL !!!";
+            var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+
+            var t = game.add.text(w / 3, w / 3, text, style);
         }
     }
     
     // Detect Collisions
 	if (game.physics.arcade.collide(ballImg, footballerOne) ||
         game.physics.arcade.collide(ballImg, footballerTwo) ||
-	    game.physics.arcade.collide(ballImg, footballerThree)) {
+	    game.physics.arcade.collide(ballImg, footballerThree)||
+	    game.physics.arcade.collide(ballImg, footballerFour)||
+	    game.physics.arcade.collide(ballImg, footballerFive)) {
         document.location.reload();
     }
     
@@ -163,7 +168,7 @@ function startFootballer() {
         game.physics.arcade.moveToXY(footballerFour, ballImg.x, ballImg.y, threeSpeed);
         isFourMove = true;
     }
-    else if (!isFiveMove && ballImg.y < footballerFive.y + w / 4) {
+    else if (!isFiveMove && ballImg.y < footballerFive.y + w / 8) {
         game.physics.arcade.moveToXY(footballerFive, ballImg.x, ballImg.y, threeSpeed);
         isFiveMove = true;
     }
