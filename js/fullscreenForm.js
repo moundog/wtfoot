@@ -66,7 +66,7 @@
 		// show progress bar
 		ctrlProgress : true,
 		// show navigation dots
-		ctrlNavDots : true,
+		ctrlNavDots : false,
 		// show [current field]/[total fields] status
 		ctrlNavPosition : true,
 		// reached the review and submit step

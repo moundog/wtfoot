@@ -3,7 +3,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	color: #fff;
+	color: #e9c97e;
 }
 
 .overview .fs-form-wrap {
@@ -21,13 +21,15 @@
 }
 
 .fs-title h1 {
+	color: white;
+	text-align: center;
 	margin: 0;
 }
 
 /* Form */
 .fs-form {
 	position: relative;
-	text-align: left;
+	text-align: center;
 	font-size: 2.5em;
 }
 
@@ -812,7 +814,7 @@ input[type=text]::-ms-clear {
 		top: 6em;
 		right: 2em;
 		left: 0;
-		padding: 0 3.75em 0 1em;
+		padding: 0 2em 0 2em;
 		width: auto;
 		font-size: 2em;
 	}

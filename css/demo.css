@@ -1,3 +1,4 @@
+/*
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 @font-face {
 	font-weight: normal;
@@ -9,6 +10,11 @@
 		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
+*/
+@font-face {
+	font-family: DINAlternateRegular;
+	src: url('../fonts/DINAlternateRegular.otf') format('opentype');
+}
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -19,11 +25,11 @@ html, body, .container {
 }
 
 body {
-	background: #CCCCCC;
+	background: url(../img/players-overlay.png) no-repeat, url(../img/players.jpg) no-repeat;
+	background-size: cover;
 	color: #111111;
-	font-weight: 400;
 	font-size: 1em;
-	font-family: 'Raleway', Arial, sans-serif;
+	font-family: 'DINAlternateRegular';
 	overflow: hidden;
 	overflow-y: scroll;
 	min-height: 590px;
