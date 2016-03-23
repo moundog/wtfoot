@@ -1,6 +1,6 @@
 var actualElemPos = 0;
 var isFinish = false;
-var p = ["Zlatan Ibrahimovic", "Eden Hazard", "Cristiano Ronaldo", "Petr Cech", "Ivan Rakitic", "Robert	Lewandowski", "Andres Iniesta", " Sergio Ramos", "Gianluigi Buffon", "Paul Pogba", "Karim Benzema", "Wayne Rooney", "Gareth Bale", "Thomas Mueller", "Stephan Lichtsteiner", "Xherdan Shaqiri"];
+var p = ["Zlatan Ibrahimovic", "Eden Hazard", "Cristiano Ronaldo", "Petr Cech", "Ivan Rakitic", "Robert	Lewandowski", "Andres Iniesta", "Sergio Ramos", "Gianluigi Buffon", "Paul Pogba", "Karim Benzema", "Wayne Rooney", "Gareth Bale", "Thomas Mueller", "Stephan Lichtsteiner", "Xherdan Shaqiri"];
 
 var a = [];
 var j = [];

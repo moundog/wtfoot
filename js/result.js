@@ -1,8 +1,7 @@
 var images = ["zlatan", "Hazard", "ronaldo", "cech", "rakitic", "lewandowski", "iniesta", "sergioramos", "buffon", "pogba", "benzema", "rooney", "bale", "thomasmueller", "lichtsteiner", "shaqiri"];
 
 
-var p = ["Zlatan Ibrahimovic", "Eden Hazard", "Cristiano Ronaldo", "Petr Cech", "Ivan Rakitic", "Robert	Lewandowski", "Andres Iniesta", " Sergio Ramos", "Gianluigi Buffon", "Paul Pogba", "Karim Benzema", "Wayne Rooney", "Gareth Bale", "Thomas Mueller", "Stephan Lichtsteiner", "Xherdan Shaqiri"];
-
+var names = ["Zlatan Ibrahimovic", "Eden Hazard", "Cristiano Ronaldo", "Petr Cech", "Ivan Rakitic", "Robert	Lewandowski", "Andres Iniesta", " Sergio Ramos", "Gianluigi Buffon", "Paul Pogba", "Karim Benzema", "Wayne Rooney", "Gareth Bale", "Thomas Mueller", "Stephan Lichtsteiner", "Xherdan Shaqiri"];
 
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1);
@@ -19,7 +18,7 @@ function getQueryVariable(variable) {
 window.onload = function () {
     var result = getQueryVariable("result");
     document.getElementById("picture").src = "img/footballer/" + images[result] + ".jpg";
-    document.getElementById("result-name").innerHTML = capitalizeFirstLetter(images[result]);
+    document.getElementById("result-name").innerHTML = names[result];
 }
 
 function capitalizeFirstLetter(string) {
