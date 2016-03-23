@@ -2,11 +2,12 @@ var score = 0;
 var timeout = null;
 var nbShoot = 5;
 var goalIsFinish = false;
+var shotSpeed = 1500;
+var decrementSpeed = 150;
 
 
 function startGoalGame() {
     var cw = $('#goal-table').width();
-    console.error(cw);
     $('#goal-table').css({
         'height': Math.round(cw / 2) + 'px'
     });
@@ -41,7 +42,8 @@ function startGoalGame() {
         
         elem.innerHTML = '<img src="img/ball.png" width="100%" id="ball-catch" onclick="catchBall(true)"/>';
         
-        timeout = setTimeout( catchBall, 1500 );
+        timeout = setTimeout( catchBall, shotSpeed );
+        shotSpeed -= decrementSpeed;
     }
 
     function catchBall(isClick) {
@@ -56,12 +58,12 @@ function startGoalGame() {
     }
 
 function mouseUp() {
-     document.getElementById("hand-cursor").src = "img/hands.png";
+     document.getElementById("hand-cursor").style.width = "10%";
 }
 
 function mouseDown() {
     var hand = document.getElementById("hand-cursor");
-    hand.src = "img/hands_grab.png";
+    hand.style.width = "8%";
     clickBall();
 }
 
@@ -75,7 +77,6 @@ function clickBall() {
     offsetLeftBall   = ballRect.left - bodyRect.top
     offsetTopHand   = handRect.top - bodyRect.top
     offsetLeftHand   = handRect.left - bodyRect.top;
-    console.error(offsetTopBall + " : " + offsetLeftBall + " : " + offsetTopHand + " : " + offsetLeftHand);
     if ((offsetTopBall + 40 > offsetTopHand && offsetTopBall - 40 < offsetTopHand) 
         && (offsetLeftBall + 40 > offsetLeftHand && offsetLeftBall - 40 < offsetLeftHand))
         catchBall(true);

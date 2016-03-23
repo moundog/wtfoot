@@ -95,8 +95,6 @@ function update () {
 
     var score = Math.round((ballStartPosY - ballImg.y) / (ballStartPosY - goalPosY) * 100);
     
-    document.getElementById("score-contener").innerHTML =  score;
-    
     if (score >= 100) {
         if (ballImg.x > w / 2 - w / 10 && ballImg.x < w / 2 + w / 18) {
             var text = "GOAL !!!";

@@ -1,8 +1,16 @@
+
+@font-face {
+	font-family: DINAlternateRegular;
+	src: url('../fonts/DINAlternateRegular.otf') format('opentype');
+}
+
+
 body {
     background-image: url("../img/3-layers.png");
     background-size:cover;
     color: white;
     text-align: center;
+	font-family: 'DINAlternateRegular';
 }
 
 img {
