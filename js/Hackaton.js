@@ -11,7 +11,7 @@ function nextElement() {
         return;
     $('.question:eq(' + actualElemPos + ')').fadeOut(500);
     actualElemPos++;
-    if (document.getElementById("form-div").getElementsByClassName('question').length - 1 < actualElemPos) {
+    if ($('.question').length - 1 < actualElemPos) {
         alert("Finish");
         isFinish = true;
         return;
@@ -21,4 +21,6 @@ function nextElement() {
 
 function showElem() {
     $('.question:eq(' + actualElemPos + ')').fadeIn(500);
+    if ($('.question:eq(' + actualElemPos + ')').attr('id') == "goal-game")
+        startGoalGame();
 }

@@ -11,6 +11,8 @@ var speedRatio = w/ 500;
 var ballSpeed = 100 * speedRatio, oneSpeed = 140 * speedRatio, twoSpeed = 160 * speedRatio, threeSpeed = 180 * speedRatio;
 var game = new Phaser.Game(w, w / 1.2, Phaser.CANVAS, 'game-contener', { preload: preload, create: create, resize:onResize, update: update });
 
+var stratIsFinish = false;
+
 function preload() {
     game.load.image('field', 'img/field.png', w, w / 2);
     game.load.image('ball', 'img/ball.png', 40, 40);
@@ -101,7 +103,9 @@ function update () {
             var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 
             var t = game.add.text(w / 3, w / 3, text, style);
-            setTimeout( nextElement, 1500 );
+            if (!stratIsFinish)
+                setTimeout( nextElement, 1500 );
+            stratIsFinish = true;
         }
     }
     
@@ -115,7 +119,9 @@ function update () {
         var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 
         var t = game.add.text(w / 3, w / 3, text, style);
-        setTimeout( nextElement, 1500 );
+            if (!stratIsFinish)
+                setTimeout( nextElement, 1500 );
+            stratIsFinish = true;
     }
     
     //  If the sprite is > 8px away from the pointer then let's move to it
