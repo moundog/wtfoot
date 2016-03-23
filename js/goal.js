@@ -1,6 +1,6 @@
 var score = 0;
 var timeout = null;
-var nbShoot = 6;
+var nbShoot = 5;
 var goalIsFinish = false;
 
 
@@ -18,7 +18,7 @@ function startGoalGame() {
         nbShoot--;
         if (nbShoot < 0) {
             if (!goalIsFinish)
-                setTimeout( nextElement, 1500 );
+                setTimeout( storeAnswerGoal(score), 1000 );
             goalIsFinish = true;
             return;
         }

@@ -104,9 +104,12 @@ function update () {
 
             var t = game.add.text(w / 3, w / 3, text, style);
             if (!stratIsFinish)
-                setTimeout( nextElement, 1500 );
+                setTimeout(storeAnswerStratGame(1), 1500 );
             stratIsFinish = true;
         }
+        if (!stratIsFinish)
+            setTimeout(storeAnswerStratGame(0), 1500 );
+        stratIsFinish = true;
     }
     
     // Detect Collisions
@@ -120,7 +123,7 @@ function update () {
 
         var t = game.add.text(w / 3, w / 3, text, style);
             if (!stratIsFinish)
-                setTimeout( nextElement, 1500 );
+                setTimeout(storeAnswerStratGame(0), 1500 );
             stratIsFinish = true;
     }
     
