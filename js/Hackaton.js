@@ -1,10 +1,14 @@
 var actualElemPos = 0;
 var isFinish = false;
-var p = ["Eden Hazard", "Petr Čech"];
+var p = ["Zlatan Ibrahimovic", "Eden Hazard", "Cristiano Ronaldo", "Petr Cech", "Ivan Rakitic", "Robert	Lewandowski"];
 var a = [];
 var j = [];
-j[0] = [1, 1, 3];
-j[1] = [3, 1, 5];
+j[0] = [2, 1, 3, 4, 0, 3, 1, 2];
+j[1] = [1, 1, 4, 1, 4, 1, 5, 2];
+j[2] = [2, 1, 1, 4, 0, 1, 5, 1];
+j[3] = [3, 0, 2, 3, 5, 4, 6, 1];
+j[4] = [2, 0, 4, 1, 3, 4, 6, 4];
+j[5] = [1, 1, 3, 1, 1, 2, 6, 1];
 var r = [];
 for (var l = 0; l < j.length; l++) {
     r[l] = [];

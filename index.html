@@ -25,7 +25,7 @@
 				</div>
                 <div id="form-div">
                     <div class="question">
-                        <h3 >An attacker is breaking through your defense and you are the only one that can stop him. What do you do?</h3>
+                        <h3 >A striker is breaking through your defense and you are the only one that can stop him. What do you do?</h3>
                         <div class="answer">
                             <div onclick="storeAnswer(this)" value="1" class="radio-div">
                                     <div class="label-left"><img src="img/redCross.png" /></div>
@@ -47,6 +47,48 @@
                                 </div>
                                 <h3 class="fs-anim-lower">Score : <span id="score-contener">0</span>%</h3>
                                 <input class="hidden" id="q5" name="q5" type="text" placeholder="Dean Moriarty"/>
+                    </div>
+                    <div class="question">
+                        <h3>There is a harsh argument between your teammate and the referee. What do you do?</h3>
+                        <div class="answer">
+                            <div onclick="storeAnswer(this)" value="1" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>You spit at the referee</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="2" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>You calm down your teammate</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="3" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>You insult the referee</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="4" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>You do not get involved and restyle your hair</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>What do you drink after a tough game?</h3>
+                        <div class="answer">
+                            <div onclick="storeAnswer(this)" value="1" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>Just one beer</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="2" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>Too many beers to count them</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="3" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>An energy drink</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="4" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>Nothing, I would rather have sex</p></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="question" id="goal-game">
                         <img src="img/hands.png" id="hand-cursor" onmousedown="mouseDown()" onmouseup="mouseUp()"/>
@@ -95,6 +137,77 @@
                             </table>
                         </div>
                         <h3>Score : <span id="score-goal-contener">0</span></h3>
+                    </div>
+                    <div class="question">
+                        <h3>What is your favorite movie?</h3>
+                        <div class="answer">
+                            <div onclick="storeAnswer(this)" value="1" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>Titanic</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="2" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>Catch Me If You Can</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="3" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>Fight Club</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="4" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>The King's Speech</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>You win a trip at a contest. Where would you travel?</h3>
+                        <div class="answer">
+                            <div onclick="storeAnswer(this)" value="1" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>In Stockholm, to visit the Fotografiska Museum</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="2" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>In England, to have a BBQ in the Teletubbies' garden</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="3" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>In Pamplona, to run with the bulls</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="4" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>Nowhere, I would rather sell my ticket to my stepfather</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="5" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>In the Alps, to spend a night in a jacuzzi</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="6" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>In Poland, to go and pray in a monastery</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <h3>Which character do you associate with regarding money?</h3>
+                        <div class="answer">
+                            <div onclick="storeAnswer(this)" value="1" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>Bill Gates</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="2" class="radio-div">
+                                    <div class="label-left"><img src="img/shirt.png" /></div>
+                                    <div class="label-right"><p>Uncle Scrooge</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="3" class="radio-div">
+                                    <div class="label-left"><img src="img/snail.png" /></div>
+                                    <div class="label-right"><p>Bernard Madoff</p></div>
+                            </div>
+                            <div onclick="storeAnswer(this)" value="4" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>A little piggy bank</p></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 			</div><!-- /fs-form-wrap -->
