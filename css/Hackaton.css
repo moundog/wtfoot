@@ -1,7 +1,85 @@
+
+@font-face {
+	font-family: DINAlternateRegular;
+	src: url('../fonts/DINAlternateRegular.otf') format('opentype');
+}
+
+body {
+	background: url(../img/players-overlay.png) no-repeat, url(../img/players.jpg) no-repeat;
+	background-size: cover;
+	color: #111111;
+	font-size: 1em;
+	font-family: 'DINAlternateRegular';
+	overflow: hidden;
+	overflow-y: scroll;
+    color:antiquewhite;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 #result-div {
     position: absolute;
     text-align: center;
     left: 20%;
     right: 20%;
     top: 20%;
+}
+
+#game-contener {
+    margin-left: -6%;
+}
+
+#form-div {
+    margin-top: 50px;
+}
+#form-div h3 {
+    margin-left:5%;
+    width:80%;
+}
+.answer {
+    margin-left:15%;
+    margin-top:50px;
+    position: relative;
+    width:60%;
+    cursor: pointer;
+}
+.label-left {
+    width: 20%;
+    float: left;
+    height: 50px;
+    border-right: medium double #000000;
+}
+.label-left img {
+    width: 50px;
+    margin-top:1px;
+}
+.label-right {
+    width: 70%;
+    float: right;
+    height: 50px;
+    margin-right: 5%;
+    vertical-align: text-bottom;
+}
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.visible {
+}
+
+.radio-div {
+    margin-bottom: 10px;
+    overflow:hidden;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    background-color:rgba(100, 100, 100, 0.7);
+}
+.radio-div:hover {
+    margin-bottom: 10px;
+    overflow:hidden;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    background-color:rgba(200, 200, 200, 0.7);
 }

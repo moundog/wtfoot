@@ -1,0 +1,21 @@
+table {
+    background-image: url("../img/goal.png");
+    background-size:cover;
+    left:10%;
+    width:80%;
+    cursor:none;
+}
+
+#hand-cursor{
+    position:absolute;
+    width:10%;
+    height:10%;
+    margin-left:-5%;
+    margin-top: -2%;
+    cursor:none;
+}
+
+td {
+    width:12.5%;
+    height:25%;
+}

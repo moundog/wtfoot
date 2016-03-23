@@ -7,13 +7,12 @@
 		<title>WTFoot</title>
 		<meta name="description" content="Answer questions and take on challenges to find out which player from the UEFA Euro 2016 is your closest match" />
 		<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/Hackaton.css" />
-		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
-		<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="js/modernizr.custom.js"></script>
+        <script src="js/phaser.js" ></script>
+        <script src="js/stratGame.js" ></script>
+        <script src="js/Hackaton.js" ></script>
 	</head>
 	<body>
 		<div class="container">
@@ -21,111 +20,45 @@
 			<div class="fs-form-wrap" id="fs-form-wrap">
 				<div class="fs-title">
 					<h1>WTFoot</h1>
-					<!--
-					<div class="codrops-top">
-						<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/NotificationStyles/"><span>Previous Demo</span></a>
-						<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19520"><span>Back to the Codrops Article</span></a>
-						<a class="codrops-icon codrops-icon-info" href="#"><span>This is a demo for a fullscreen form</span></a>
-					</div>
-					-->
 				</div>
-				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
-					<ol class="fs-fields">
-						<!--
-						<li>
-							<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
-							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
-						</li>
-						-->
-						<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" for="q1">An attacker is breaking through your defense and you are the only one that can stop him. What do you do?</label>
-							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								<span><input id="q1a" name="q1" type="radio" value="grab"/><label for="q1a" class="radio-conversion">I discreetly grab his shirt</label></span>
-								<span><input id="q1b" name="q1" type="radio" value="tackle"/><label for="q1b" class="radio-social">I tackle him violently</label></span>
-								<span><input id="q1c" name="q1" type="radio" value="none"/><label for="q1c" class="radio-mobile">Nothing, I'm too slow</label></span>
-							</div>
-						</li>
-						<!--<li data-input-trigger>
-							<label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it all over">Choose a color for your website.</label>
-							<select class="cs-select cs-skin-boxes fs-anim-lower">
-								<option value="" disabled selected>Pick a color</option>
-								<option value="#588c75" data-class="color-588c75">#588c75</option>
-								<option value="#b0c47f" data-class="color-b0c47f">#b0c47f</option>
-								<option value="#f3e395" data-class="color-f3e395">#f3e395</option>
-								<option value="#f3ae73" data-class="color-f3ae73">#f3ae73</option>
-								<option value="#da645a" data-class="color-da645a">#da645a</option>
-								<option value="#79a38f" data-class="color-79a38f">#79a38f</option>
-								<option value="#c1d099" data-class="color-c1d099">#c1d099</option>
-								<option value="#f5eaaa" data-class="color-f5eaaa">#f5eaaa</option>
-								<option value="#f5be8f" data-class="color-f5be8f">#f5be8f</option>
-								<option value="#e1837b" data-class="color-e1837b">#e1837b</option>
-								<option value="#9bbaab" data-class="color-9bbaab">#9bbaab</option>
-								<option value="#d1dcb2" data-class="color-d1dcb2">#d1dcb2</option>
-								<option value="#f9eec0" data-class="color-f9eec0">#f9eec0</option>
-								<option value="#f7cda9" data-class="color-f7cda9">#f7cda9</option>
-								<option value="#e8a19b" data-class="color-e8a19b">#e8a19b</option>
-								<option value="#bdd1c8" data-class="color-bdd1c8">#bdd1c8</option>
-								<option value="#e1e7cd" data-class="color-e1e7cd">#e1e7cd</option>
-								<option value="#faf4d4" data-class="color-faf4d4">#faf4d4</option>
-								<option value="#fbdfc9" data-class="color-fbdfc9">#fbdfc9</option>
-								<option value="#f1c1bd" data-class="color-f1c1bd">#f1c1bd</option>
-							</select>
-						</li>
-
-						<li>
-							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
-							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
-						</li>
-						<li>
-							<label class="fs-field-label fs-anim-upper" for="q5">What's your budget?</label>
-							<input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="1000" step="100" min="100"/>
-						</li>-->
-						<li>
-							<label class="fs-field-label fs-anim-upper" for="q4">Describe how you imagine your new website</label>
-							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
-						</li>
-					</ol><!-- /fs-fields -->
-				</form><!-- /fs-form -->
+                <div id="form-div">
+                    <div class="question">
+                        <h3 >An attacker is breaking through your defense and you are the only one that can stop him. What do you do?</h3>
+                        <div class="answer">
+                            <div onclick="nextElement()" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                <div class="label-right"><p>I discreetly grab his shirt</p></div>
+                            </div>
+                            <div onclick="nextElement()" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>I tackle him violently</p></div>
+                            </div>
+                            <div onclick="nextElement()" class="radio-div">
+                                    <div class="label-left"><img src="img/redCross.png" /></div>
+                                    <div class="label-right"><p>Nothing, I'm too slow</p></div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="question">
+                                <label class="fs-field-label fs-anim-upper" for="q5">Will you be able to reach the goal ?</label>
+                                <div id="game-contener" class="fs-anim-lower">
+                                </div>
+                                <h3 class="fs-anim-lower">Score : <span id="score-contener">0</span>%</h3>
+                                <input class="hidden" id="q5" name="q5" type="text" placeholder="Dean Moriarty"/>
+                    </div>
+                </div>
 			</div><!-- /fs-form-wrap -->
-
+            
             <div id="result-div">
                 <h1>You are a footballer</h1>
             </div>
             
             
 		</div><!-- /container -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-		<script src="js/classie.js"></script>
-		<script src="js/selectFx.js"></script>
-		<script src="js/fullscreenForm.js"></script>
 		<script>
 			(function() {
-				var formWrap = document.getElementById('fs-form-wrap');
-				[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
-					new SelectFx(el, {
-						stickyPlaceholder: false,
-						onChange: function(val) {
-							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
-						}
-					});
-				});
-
                 		document.getElementById('result-div').style.visibility = 'hidden';
-				new FForm(formWrap, {
-					onReview: function() {
-                        			document.getElementById("result-div").style.visibility = "visible";
-                        			//document.location.reload();
-					}
-				});
 
-				/*
-				$.getJSON('data/wtf-questions.json', function(data) {
-					$.each(data, function(key, val) {
-						console.log(val.q);
-					});
-                        	});
-				*/
 			})();
 		</script>
 	</body>

@@ -306,13 +306,13 @@ button.fs-continue,
 }
 
 .fs-fields > li .fs-radio-custom span label {
-	color: rgba(0,0,0,0.4);
+	color: rgba(0.6,0.6,0.6,0.4);
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
 .fs-form-overview .fs-fields > li .fs-radio-custom span {
-	max-width: 140px;
+	max-width: 250px;
 }
 
 .fs-form-overview .fs-fields > li .fs-radio-custom span {
@@ -412,7 +412,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .cs-skin-boxes > span::before {
-	padding-top: 50px;
+	padding-top: 10px;
 	box-shadow: 0 20px 0 #292c30, inset 0 -5px #292c30;
 }
 
@@ -528,7 +528,7 @@ button.fs-continue,
 	top: 0;
 	right: 0;
 	overflow: hidden;
-	color: rgba(0,0,0,0.4);
+	color: rgba(0.6,0.6,0.6,0.4);
 	margin: 40px;
 	width: 2em;
 	font-weight: 700;
@@ -627,7 +627,7 @@ button.fs-continue,
 button.fs-submit,
 button.fs-continue {
 	padding: 0.6em 1.5em;
-	border: 3px solid #232529;
+	border: 3px solid #CDCDCD;
 	border-radius: 40px;
 	font-weight: 700;
 	color: rgba(0,0,0,0.4);
@@ -663,7 +663,7 @@ button.fs-continue:hover {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 100%;
+	width: 50px;
 	line-height: 3;
 	text-align: center;
 	background: transparent;
@@ -800,6 +800,32 @@ input[type=text]::-ms-clear {
     display: none;
 }
 
+	button.fs-continue {
+		right: 20px;
+		bottom: 20px;
+		margin: 0;
+		padding: 50px 0 0 50px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		font-size: 2em;
+	}
+
+	button.fs-continue::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		content: '\27A1';
+		text-align: center;
+		font-size: 1em;
+		line-height: 50px;
+	}
+
+	.fs-continue::after {
+		content: '';
+	}
 /* Adjust form for smaller screens */
 @media screen and (max-width: 52.5em) {
 	body {
@@ -838,32 +864,6 @@ input[type=text]::-ms-clear {
 		right: 25px;
 	}
 
-	button.fs-continue {
-		right: 20px;
-		bottom: 20px;
-		margin: 0;
-		padding: 50px 0 0 50px;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		font-size: 2em;
-	}
-
-	button.fs-continue::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		content: '\27A1';
-		text-align: center;
-		font-size: 1em;
-		line-height: 50px;
-	}
-
-	.fs-continue::after {
-		content: '';
-	}
 
 	button.fs-submit {
 		width: 100%;

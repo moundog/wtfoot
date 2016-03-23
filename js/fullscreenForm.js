@@ -64,7 +64,7 @@
 	 */
 	FForm.prototype.options = {
 		// show progress bar
-		ctrlProgress : true,
+		ctrlProgress : false,
 		// show navigation dots
 		ctrlNavDots : false,
 		// show [current field]/[total fields] status
@@ -117,7 +117,7 @@
 		this.ctrls = createElement( 'div', { cName : 'fs-controls', appendTo : this.el } );
 
 		// continue button (jump to next field)
-		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
+		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots

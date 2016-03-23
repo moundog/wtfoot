@@ -101,6 +101,7 @@ function update () {
             var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
 
             var t = game.add.text(w / 3, w / 3, text, style);
+            setTimeout( nextElement, 1500 );
         }
     }
     
@@ -110,7 +111,11 @@ function update () {
 	    game.physics.arcade.collide(ballImg, footballerThree)||
 	    game.physics.arcade.collide(ballImg, footballerFour)||
 	    game.physics.arcade.collide(ballImg, footballerFive)) {
-        document.location.reload();
+        var text = "BLOCKED!";
+        var style = { font: "65px Arial", fill: "#ff0044", align: "center" };
+
+        var t = game.add.text(w / 3, w / 3, text, style);
+        setTimeout( nextElement, 1500 );
     }
     
     //  If the sprite is > 8px away from the pointer then let's move to it
