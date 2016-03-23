@@ -25,10 +25,10 @@ span {
 }
 
 #footer {
-    position: fixed;
-    bottom: 0;
+    bottom: -5;
     width: 118%;
     height: 150px;
+    margin-top: 20px;
     background-color: rgba(55, 55, 55, 0.5);
     margin-left: -10%;
 }
