@@ -1,4 +1,4 @@
-# wtfoot
+# What The Foot
 
 ### Description
 
